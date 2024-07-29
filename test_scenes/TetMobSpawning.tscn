@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b113w5bwe8le1"]
+
+[ext_resource type="PackedScene" uid="uid://dr2u4uixkkmhh" path="res://Player/player.tscn" id="1_g4e1e"]
+[ext_resource type="PackedScene" uid="uid://5dliqyap1m0a" path="res://systems/mob_spawner.tscn" id="2_1i4r6"]
+[ext_resource type="PackedScene" uid="uid://ck3tm5hqhvkme" path="res://misc/ritual.tscn" id="3_158tp"]
+[ext_resource type="PackedScene" uid="uid://dblya72q7124a" path="res://misc/meat.tscn" id="4_0ji2p"]
+
+[node name="TetMobSpawning" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_g4e1e")]
+position = Vector2(538, 313)
+max_health = 50
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_1i4r6")]
+mobs_per_minute = 50.0
+
+[node name="Ritual" parent="." instance=ExtResource("3_158tp")]
+position = Vector2(541, 285)
+
+[node name="Meat" parent="." instance=ExtResource("4_0ji2p")]
+position = Vector2(116, 459)
+
+[node name="Meat2" parent="." instance=ExtResource("4_0ji2p")]
+position = Vector2(90, 106)
+
+[node name="Meat3" parent="." instance=ExtResource("4_0ji2p")]
+position = Vector2(942, 411)
